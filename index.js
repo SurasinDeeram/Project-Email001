@@ -27,7 +27,7 @@ app.post("/send_email", function(req, response){
         service: 'gmail',
         auth: {
           user: 'sursinthud@gmail.com',
-          pass: 'wwpzdoglvurhkdpv'
+          // pass: 'wwpzdoglvurhkdpv'
         }
     })
 
