@@ -1,0 +1,42 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+    <title>MiniProject </title>
+    <link rel="stylesheet" href="costom.css">
+</head>
+  <body>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<div class="container bg">
+    <div class="menu">
+      <div class="logo">
+        <a href=""><i class="fa-solid fa-envelope"></i> Gmail </a>
+      </div>
+     </div>
+  <div class="content">
+    <div class="header">
+    <form action="/send_email" method="post">
+        From: <input type="email" name="from" id="from"><br><br>
+        To: <input type="email" name="to" id="to"><br><br>
+        Subject: <input type="text" name="subject" id="subject"><br><br>
+        <div style="width:100%"><br> <textarea id="message" name="message" ></textarea> <br><br></div>
+        <script>
+            // Replace the <textarea id="editor1"> with a CKEditor
+            // instance, using default configuration.
+            CKEDITOR.replace('message');
+            function CKupdate() {
+                for (instance in CKEDITOR.instances)
+                    CKEDITOR.instances[instance].updateElement();
+            }
+        </script>
+        <input type="submit" value="Send">
+      </div>
+      </div>
+    </form>
+  </body>
+ </div>
+ </html>
